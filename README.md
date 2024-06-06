@@ -17,4 +17,5 @@ Every general machine learning task including deep learning has a standardized a
 The PlantVillage dataset, an openly accessible resource, features a variety of plant disease categories. For this project, we focused on 12 classes relevant to tomato and pepper crops, narrowing down from the original 38 classes and 54,305 images. The dataset was split into training (80%) and validation/testing (20%) subsets to ensure robust model performance.
 
 ![Sample images from the PlantVillage Dataset](https://drive.google.com/ucexport=view&id=10XGh64TyRWrzTbSn01QD-EPCK0SpiFiZ)
+
 *Sample images from the PlantVillage Dataset*
