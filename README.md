@@ -71,7 +71,8 @@ Post-conversion, the model’s accuracy was validated to ensure the optimization
 
 ## Mobile App Deployment
 The deployment of the crop disease identification solution culminated in a user-friendly mobile app built using React Native into which the TensorFlow Lite model was integrated. 
-![interface](https://drive.google.com/uc?export=view&id=1g5qHpPwDmXyO1uaXyYGREtKADuzw1M_a)
+<img src="https://drive.google.com/uc?export=view&id=1g5qHpPwDmXyO1uaXyYGREtKADuzw1M_a" alt="Interface" width="400>
+
 *App User Interface*
 
 ### User Interaction and Inference
