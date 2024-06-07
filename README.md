@@ -97,21 +97,21 @@ The deployment of the crop disease identification solution culminated in a user-
 - Image Upload: Users can upload images of crop leaves directly from their bobile devices
 - Real-Time Inference: The TensorFlow Lite model analyzes the image to identify potential diseases.
 
-<div>
+<div align="center">
   <img src="https://drive.google.com/uc?export=view&id=1OUkugtCPtTCXfs5UuvzZImNHsU9oo7Qy" alt="Inferfence" height = "500" width="400">
 </div>
 
 
 - Prediction Display: Shows detected diseases with confidence levels in clear format
 
-<div>
+<div align="center">
   <img src="https://drive.google.com/uc?export=view&id=1AI7aGpPiYLaiEATqFV34K7Rb5ngvzFjm" alt="predict" height = "500" width="400">
 </div>
 
 
 - Guidance and Recommendations: Offers practical steps for disease management and treatment
 
- <div>
+ <div align="center">
    <img src="https://drive.google.com/uc?export=view&id=1yOq99VvbRlVW6Zt43fn4kxDlqEzJGptm" alt="Interface" height = "550" width="400">
  </div>
 
