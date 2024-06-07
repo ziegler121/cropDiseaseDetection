@@ -19,6 +19,7 @@ Every general machine learning task including deep learning has a standardized a
 ![Machine Learning Workflow image](https://drive.google.com/uc?export=view&id=1ZviuEP_vGuBGIhExYLygphSfWbNp1t_W)
 
 
+
 ### DATA COLLECTION
 **Description of Dataset**
 The PlantVillage dataset, an openly accessible resource, features a variety of plant disease categories. For this project, we focused on 12 classes relevant to tomato and pepper crops, narrowing down from the original 38 classes and 54,305 images. The dataset was split into training (80%) and validation/testing (20%) subsets to ensure robust model performance.
@@ -26,11 +27,12 @@ The PlantVillage dataset, an openly accessible resource, features a variety of p
 *Sample images from the PlantVillage Dataset*
 
 
+
 ## Data Pre-Processing and Augmentation
 Color images from the PlantVillage dataset were resized to 224x224 pixels to meet the input requirements of the MobileNetV2 model. Pixel values were rescaled from [0, 255] to [0, 1] to aid neural network training. To prevent overfitting, data augmentation techniques such as random flips, mirror images, and rotations up to 20% were applied. These augmentations were generated on-the-fly during training to enhance model robustness and accuracy in classifying real-world images.
 
-## Model Selection and Design
 
+## Model Selection and Design
 
 ### Choice of MobileNet-V2
 MobileNet-V2 was chosen for its efficiency and suitability for mobile devices. Its design uses depth-wise separable convolutions, reducing computation while maintaining high accuracy.
@@ -57,10 +59,14 @@ A summary of the entire Network Architecture is shown below:
 ## Training and Evaluation
 
 Training and evaluation were conducted on Google Colab, leveraging its cloud-based environment for enhanced computational power. The model was trained over 20 epochs with early stopping to prevent overfitting. By the 20th epoch, the model achieved training and validation accuracies of 93.58% and 91.29%, respectively.
-*MOdel Training and Validation Accuracies(left) and Trainng and Validation loss(right) as a function of epoch number*
+![model evaluation](https://drive.google.com/uc?export=view&id=1TKNHL1yXLjEEsJwmRuWnkcnJeQC8cNuV)
+*Model Training and Validation Accuracies(left) and Training and Validation loss(right) as a function of epoch number*
+
 
 Additionally, while validation accuracy offers insight into how the model generalizes to unfamiliar data, the ultimate assessment lies in predictions made on unseen data (test data). Graphical depictions of the model’s predictions on a subset of the test data are provided below, accompanied by the model’s confidence score for each prediction.
 ![Model predictions](https://drive.google.com/uc?export=view&id=130pyPQj6NIJrfLyvihq6Etb4C6TrHoSP)
+
+
 
 ### Conversion to TensorFlow Lite
 After training, the model was converted to TensorFlow Lite for optimal deployment on mobile and edge devices. This conversion preserved accuracy while enhancing performance and memory efficiency.
@@ -78,18 +84,18 @@ Post-conversion, the model’s accuracy was validated to ensure the optimization
 The deployment of the crop disease identification solution culminated in a user-friendly mobile app built using React Native into which the TensorFlow Lite model was integrated. 
 
 
-<img src="https://drive.google.com/uc?export=view&id=1g5qHpPwDmXyO1uaXyYGREtKADuzw1M_a" alt="Interface" height = "400" width="400">
+<img src="https://drive.google.com/uc?export=view&id=1g5qHpPwDmXyO1uaXyYGREtKADuzw1M_a" alt="Interface" height = "450" width="400">
 
 *App User Interface*
 
 ### User Interaction and Inference
 - Image Upload: Users can upload images of crop leaves directly from their bobile devices
 - Real-Time Inference: The TensorFlow Lite model analyzes the image to identify potential diseases.
-<img src="https://drive.google.com/uc?export=view&id=1OUkugtCPtTCXfs5UuvzZImNHsU9oo7Qy" alt="Inferfence" height = "400" width="400">
+<img src="https://drive.google.com/uc?export=view&id=1OUkugtCPtTCXfs5UuvzZImNHsU9oo7Qy" alt="Inferfence" height = "500" width="400">
 
 - Prediction Display: Shows detected diseases with confidence levels in clear format
-<img src="https://drive.google.com/uc?export=view&id=1AI7aGpPiYLaiEATqFV34K7Rb5ngvzFjm" alt="predict" height = "400" width="400">
+<img src="https://drive.google.com/uc?export=view&id=1AI7aGpPiYLaiEATqFV34K7Rb5ngvzFjm" alt="predict" height = "500" width="400">
 
 - Guidance and Recommendations: Offers practical steps for disease management and treatment
-<img src="https://drive.google.com/uc?export=view&id=1yOq99VvbRlVW6Zt43fn4kxDlqEzJGptm" alt="Interface" height = "400" width="400">
+<img src="https://drive.google.com/uc?export=view&id=1yOq99VvbRlVW6Zt43fn4kxDlqEzJGptm" alt="Interface" height = "500" width="400">
 
