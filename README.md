@@ -18,22 +18,26 @@ This project involves the development of a mobile application for detecting crop
 Every general machine learning task including deep learning has a standardized approach which needs to be followed in order to obtain the best results. This is known as the Machine Learning workflow which is shown below:
 ![Machine Learning Workflow image](https://drive.google.com/uc?export=view&id=1ZviuEP_vGuBGIhExYLygphSfWbNp1t_W)
 
+
 ### DATA COLLECTION
 **Description of Dataset**
 The PlantVillage dataset, an openly accessible resource, features a variety of plant disease categories. For this project, we focused on 12 classes relevant to tomato and pepper crops, narrowing down from the original 38 classes and 54,305 images. The dataset was split into training (80%) and validation/testing (20%) subsets to ensure robust model performance.
 ![Sample images from the PlantVillage Dataset](https://drive.google.com/uc?export=view&id=10XGh64TyRWrzTbSn01QD-EPCK0SpiFiZ)
 *Sample images from the PlantVillage Dataset*
 
+
 ## Data Pre-Processing and Augmentation
 Color images from the PlantVillage dataset were resized to 224x224 pixels to meet the input requirements of the MobileNetV2 model. Pixel values were rescaled from [0, 255] to [0, 1] to aid neural network training. To prevent overfitting, data augmentation techniques such as random flips, mirror images, and rotations up to 20% were applied. These augmentations were generated on-the-fly during training to enhance model robustness and accuracy in classifying real-world images.
 
 ## Model Selection and Design
+
 
 ### Choice of MobileNet-V2
 MobileNet-V2 was chosen for its efficiency and suitability for mobile devices. Its design uses depth-wise separable convolutions, reducing computation while maintaining high accuracy.
 
 ### Customizing the Top Layers
 The top layers were fine-tuned to recognize crop diseases by replacing the original classification head with densely connected layers, tailored for our specific task.
+
 
 ### Hyperparameter Tuning
 Key hyperparameters were fine-tuned to optimize performance:
@@ -48,6 +52,7 @@ The details are listed in the table below:
 
 A summary of the entire Network Architecture is shown below:
 ![Model summary](https://drive.google.com/uc?export=view&id=15BBmPYw9INGZD2i8u9Pf77R_eBluQl8n)
+
 
 ## Training and Evaluation
 
@@ -73,15 +78,18 @@ Post-conversion, the model’s accuracy was validated to ensure the optimization
 The deployment of the crop disease identification solution culminated in a user-friendly mobile app built using React Native into which the TensorFlow Lite model was integrated. 
 
 
-<img src="https://drive.google.com/uc?export=view&id=1g5qHpPwDmXyO1uaXyYGREtKADuzw1M_a" alt="Interface" height = "500" width="400">
+<img src="https://drive.google.com/uc?export=view&id=1g5qHpPwDmXyO1uaXyYGREtKADuzw1M_a" alt="Interface" height = "400" width="400">
 
 *App User Interface*
 
 ### User Interaction and Inference
 - Image Upload: Users can upload images of crop leaves directly from their bobile devices
 - Real-Time Inference: The TensorFlow Lite model analyzes the image to identify potential diseases.
-![inference](https://drive.google.com/uc?export=view&id=1OUkugtCPtTCXfs5UuvzZImNHsU9oo7Qy)
+<img src="https://drive.google.com/uc?export=view&id=1OUkugtCPtTCXfs5UuvzZImNHsU9oo7Qy" alt="Inferfence" height = "400" width="400">
+
 - Prediction Display: Shows detected diseases with confidence levels in clear format
-![model predict](https://drive.google.com/uc?export=view&id=1AI7aGpPiYLaiEATqFV34K7Rb5ngvzFjm)
+<img src="https://drive.google.com/uc?export=view&id=1AI7aGpPiYLaiEATqFV34K7Rb5ngvzFjm" alt="predict" height = "400" width="400">
+
 - Guidance and Recommendations: Offers practical steps for disease management and treatment
-![recommend](https://drive.google.com/uc?export=view&id=1yOq99VvbRlVW6Zt43fn4kxDlqEzJGptm)
+<img src="https://drive.google.com/uc?export=view&id=1yOq99VvbRlVW6Zt43fn4kxDlqEzJGptm" alt="Interface" height = "400" width="400">
+
