@@ -60,7 +60,8 @@ A summary of the entire Network Architecture is shown below:
 
 Training and evaluation were conducted on Google Colab, leveraging its cloud-based environment for enhanced computational power. The model was trained over 20 epochs with early stopping to prevent overfitting. By the 20th epoch, the model achieved training and validation accuracies of 93.58% and 91.29%, respectively.
 ![model evaluation](https://drive.google.com/uc?export=view&id=1TKNHL1yXLjEEsJwmRuWnkcnJeQC8cNuV)
-*Model Training and Validation Accuracies(left) and Training and Validation loss(right) as a function of epoch number*
+
+*Model Training and Validation Accuracies (left) and Training and Validation loss (right) as a function of epoch number*
 
 
 Additionally, while validation accuracy offers insight into how the model generalizes to unfamiliar data, the ultimate assessment lies in predictions made on unseen data (test data). Graphical depictions of the model’s predictions on a subset of the test data are provided below, accompanied by the model’s confidence score for each prediction.
@@ -91,11 +92,14 @@ The deployment of the crop disease identification solution culminated in a user-
 ### User Interaction and Inference
 - Image Upload: Users can upload images of crop leaves directly from their bobile devices
 - Real-Time Inference: The TensorFlow Lite model analyzes the image to identify potential diseases.
+  
 <img src="https://drive.google.com/uc?export=view&id=1OUkugtCPtTCXfs5UuvzZImNHsU9oo7Qy" alt="Inferfence" height = "500" width="400">
 
 - Prediction Display: Shows detected diseases with confidence levels in clear format
+  
 <img src="https://drive.google.com/uc?export=view&id=1AI7aGpPiYLaiEATqFV34K7Rb5ngvzFjm" alt="predict" height = "500" width="400">
 
 - Guidance and Recommendations: Offers practical steps for disease management and treatment
-<img src="https://drive.google.com/uc?export=view&id=1yOq99VvbRlVW6Zt43fn4kxDlqEzJGptm" alt="Interface" height = "500" width="400">
+  
+<img src="https://drive.google.com/uc?export=view&id=1yOq99VvbRlVW6Zt43fn4kxDlqEzJGptm" alt="Interface" height = "550" width="400">
 
